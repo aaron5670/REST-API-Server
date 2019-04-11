@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined( 'BASEPATH' ) OR exit( 'No direct script access allowed' );
 
 /*
 | -------------------------------------------------------------------------
@@ -51,15 +51,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //Commented for tutorial
 //$route['404_override'] = '';
-$route['default_controller'] = 'home';
-$route['translate_uri_dashes'] = FALSE;
+$route['default_controller']   = 'home';
+$route['translate_uri_dashes'] = false;
 
 
 $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
-$route['news'] = 'news';
+$route['news']        = 'news';
 
-//$route['api'] = 'xmlrpc_client/index';
+//$route['api'] = 'xmlrpc_client';
 $route['api']['get'] = 'xmlrpc_client/get';
-//$route['api']['post'] = 'xmlrpc_client/list';
+
+/*
+ * Bron: https://www.codexworld.com/codeigniter-rest-api-user-login-registration/
+ * Tijdelijk uitgeschakeld (niet zeker wat het doet).
+ */
+//$route['api/authentication/login'] = 'api/authentication/login';
+//$route['api/authentication/registration'] = 'api/authentication/registration';
+//$route['api/authentication/user/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'api/authentication/user/id/$1/format/$3$4';
 
