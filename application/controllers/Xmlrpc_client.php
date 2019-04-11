@@ -3,28 +3,35 @@
 class Xmlrpc_client extends CI_Controller {
 
     public function index() {
+        echo '<h1>XML-RPC API</h1>';
+    }
+
+    private function auth() {
+        return $auth = array(
+            'username' => 'admin',
+            'password' => '123',
+        );
+    }
+
+    public function get() {
         $this->load->helper('url');
-        $server_url = site_url('xmlrpc_server');
+        $server_url = 'http://codeigniter.test/xmlrpc_server/';
 
         $this->load->library('xmlrpc');
 
         $this->xmlrpc->server($server_url, 80);
-        $this->xmlrpc->method('Greetings');
+        $this->xmlrpc->method('Get');
 
         $request = array(
             array(
-                // Param 0
-                array(
-                    'username' => 'admin',
-                    'password' => '123',
-                ),
+                // Param 0: Auth
+                $this->auth(),
                 'struct'
             ),
             array(
-                // Param 1
+                // Param 1: Data
                 array(
-                    'size' => 'large',
-                    'shape' => 'round'
+                    'get' => 'username',
                 ),
                 'struct'
             )

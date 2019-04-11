@@ -8,8 +8,8 @@ class Xmlrpc_server extends CI_Controller
         $this->load->library('xmlrpc');
         $this->load->library('xmlrpcs');
 
-        $config['functions']['Greetings'] = array(
-            'function' => 'Xmlrpc_server.process'
+        $config['functions']['Get'] = array(
+            'function' => 'Xmlrpc_server.get'
         );
 
         $this->xmlrpcs->initialize($config);
@@ -17,15 +17,14 @@ class Xmlrpc_server extends CI_Controller
     }
 
 
-    public function process($request)
-    {
+    public function get($request) {
 
         $username = 'admin';
         $password = '123';
 
         $parameters = $request->output_parameters();
-//        $name = $parameters[0]['name'];
-//        $size = $parameters[1]['size'];
+        $get = $parameters[1]['get'];
+
 
         if ($parameters[0]['username'] != $username || $parameters[0]['password'] != $password) {
             return $this->xmlrpc->send_error_message('100', 'Invalid Access');
@@ -33,7 +32,7 @@ class Xmlrpc_server extends CI_Controller
 
         $response = array(
             array(
-                'you_said' => 'Test',
+                'you_said' => $get,
                 'i_respond' => 'Not bad at all.'
             ),
             'struct'
