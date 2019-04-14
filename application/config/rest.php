@@ -39,7 +39,7 @@ $config['rest_default_format'] = 'json';
 | REST_Controller initialization.
 |
 */
-$config['rest_supported_formats'] = [
+$config['rest_supported_formats'] = array(
 	'json',
 	'array',
 	'csv',
@@ -48,7 +48,7 @@ $config['rest_supported_formats'] = [
 	'php',
 	'serialized',
 	'xml',
-];
+);
 /*
 |--------------------------------------------------------------------------
 | REST Status Field Name
@@ -127,7 +127,7 @@ $config['auth_source'] = '';
 |
 */
 $config['allow_auth_and_keys'] = true;
-$config['strict_api_and_auth'] = true; // force the use of both api and auth before a valid api request is made
+$config['strict_api_and_auth'] = false; // force the use of both api and auth before a valid api request is made
 /*
 |--------------------------------------------------------------------------
 | REST Login Class and Function
@@ -513,13 +513,13 @@ $config['check_cors'] = false;
 | If using CORS checks, set the allowable headers here
 |
 */
-$config['allowed_cors_headers'] = [
+$config['allowed_cors_headers'] = array(
 	'Origin',
 	'X-Requested-With',
 	'Content-Type',
 	'Accept',
 	'Access-Control-Request-Method'
-];
+);
 /*
 |--------------------------------------------------------------------------
 | CORS Allowable Methods
@@ -528,14 +528,14 @@ $config['allowed_cors_headers'] = [
 | If using CORS checks, you can set the methods you want to be allowed
 |
 */
-$config['allowed_cors_methods'] = [
+$config['allowed_cors_methods'] = array(
 	'GET',
 	'POST',
 	'OPTIONS',
 	'PUT',
 	'PATCH',
 	'DELETE'
-];
+);
 /*
 |--------------------------------------------------------------------------
 | CORS Allow Any Domain
@@ -557,4 +557,4 @@ $config['allow_any_cors_domain'] = false;
 | e.g. $config['allowed_origins'] = ['http://www.example.com', 'https://spa.example.com']
 |
 */
-$config['allowed_cors_origins'] = [];
+$config['allowed_cors_origins'] = array();
