@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">&copy; <?= date('Y') ?> - Aaron van den Berg</p>
+        <p class="m-0 text-center text-white">&copy; <?= date( 'Y' ) ?> - Aaron van den Berg</p>
     </div>
     <!-- /.container -->
 </footer>
@@ -16,8 +16,12 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
+<!-- Bootstrap scrolling nav script -->
 <script src="<?= asset_url() ?>js/scrolling-nav.js"></script>
 <script src="<?= asset_url() ?>js/jquery.easing.min.js"></script>
+
+<!-- Login form script -->
+<script src="<?= asset_url() ?>js/my-login.js"></script>
 
 </body>
 </html>
