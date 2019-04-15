@@ -4,17 +4,17 @@ class Product extends CI_Controller {
 
 	public function get( $id ) {
 		// API key
-		$apiKey = 'CODEX@123';
+		$apiKey = '81cdafca86929fb7a0376263d35604e932f5ef40';
 
 		// API auth credentials
-		$apiUser = "admin";
-		$apiPass = "1234";
+		$apiUser = "a.vdberg98@gmail.com";  // user email
+		$apiPass = "A2ronda2n";             // user password
 
 		// Specify the ID of the user
-		$userID = $id;
+		$productID = $id;
 
 		// API URL
-		$url = 'http://codeigniter.test/api/products/product/' . $userID;
+		$url = 'http://codeigniter.test/api/products/product/' . $productID;
 
 		// Create a new cURL resource
 		$ch = curl_init( $url );
@@ -37,7 +37,7 @@ class Product extends CI_Controller {
 			curl_close( $ch );
 
 			echo '<pre>';
-			var_dump( $result );
+			print_r( $result );
 			echo '</pre>';
 		}
 	}

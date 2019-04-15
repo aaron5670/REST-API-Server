@@ -22,7 +22,7 @@ $config['force_https'] = false;
 |               called 'callback' is passed, then jsonp will be returned
 | 'html'        HTML using the table library in CodeIgniter
 | 'php':        Uses var_export()
-| 'serialized':  Uses serialize()
+| 'serialized': Uses serialize()
 | 'xml':        Uses simplexml_load_string()
 |
 */
@@ -86,7 +86,7 @@ $config['enable_emulate_request'] = true;
 | e.g: My Secret REST API
 |
 */
-$config['rest_realm'] = 'CodexWorld REST API';
+$config['rest_realm'] = 'REST API';
 /*
 |--------------------------------------------------------------------------
 | REST Login
@@ -116,7 +116,7 @@ $config['rest_auth'] = 'basic';
 | Note: If 'rest_auth' is set to 'session' then change 'auth_source' to the name of the session variable
 |
 */
-$config['auth_source'] = '';
+$config['auth_source'] = 'library';
 /*
 |--------------------------------------------------------------------------
 | Allow Authentication and API Keys
@@ -127,7 +127,7 @@ $config['auth_source'] = '';
 |
 */
 $config['allow_auth_and_keys'] = true;
-$config['strict_api_and_auth'] = false; // force the use of both api and auth before a valid api request is made
+$config['strict_api_and_auth'] = true; // force the use of both api and auth before a valid api request is made
 /*
 |--------------------------------------------------------------------------
 | REST Login Class and Function
@@ -144,8 +144,8 @@ $config['strict_api_and_auth'] = false; // force the use of both api and auth be
 | e.g: md5('admin:REST API:1234') = '1e957ebc35631ab22d5bd6526bd14ea2'
 |
 */
-$config['auth_library_class']    = '';
-$config['auth_library_function'] = '';
+$config['auth_library_class']    = 'Apiauth';
+$config['auth_library_function'] = 'login';
 /*
 |--------------------------------------------------------------------------
 | Override auth types for specific class/method
@@ -274,7 +274,7 @@ $config['rest_database_group'] = 'default';
 | The table name in your database that stores API keys
 |
 */
-$config['rest_keys_table'] = 'keys';
+$config['rest_keys_table'] = 'rest_api_keys';
 /*
 |--------------------------------------------------------------------------
 | REST Enable Keys
@@ -317,10 +317,10 @@ $config['rest_key_column'] = 'key';
 | Specify the method used to limit the API calls
 |
 | Available methods are :
-| $config['rest_limits_method'] = 'IP_ADDRESS'; // Put a limit per ip address
-| $config['rest_limits_method'] = 'API_KEY'; // Put a limit per api key
-| $config['rest_limits_method'] = 'METHOD_NAME'; // Put a limit on method calls
-| $config['rest_limits_method'] = 'ROUTED_URL';  // Put a limit on the routed URL
+| $config['rest_limits_method'] = 'IP_ADDRESS';     // Put a limit per ip address
+| $config['rest_limits_method'] = 'API_KEY';        // Put a limit per api key
+| $config['rest_limits_method'] = 'METHOD_NAME';    // Put a limit on method calls
+| $config['rest_limits_method'] = 'ROUTED_URL';     // Put a limit on the routed URL
 |
 */
 $config['rest_limits_method'] = 'ROUTED_URL';
@@ -382,7 +382,7 @@ $config['rest_enable_logging'] = false;
 | table name to match e.g. my_logs
 |
 */
-$config['rest_logs_table'] = 'logs';
+$config['rest_logs_table'] = 'rest_api_logs';
 /*
 |--------------------------------------------------------------------------
 | REST Method Access Control
@@ -413,7 +413,7 @@ $config['rest_enable_access'] = false;
 | table name to match e.g. my_access
 |
 */
-$config['rest_access_table'] = 'access';
+$config['rest_access_table'] = 'rest_api_access';
 /*
 |--------------------------------------------------------------------------
 | REST API Param Log Format
@@ -460,7 +460,7 @@ $config['rest_enable_limits'] = false;
 | table name to match e.g. my_limits
 |
 */
-$config['rest_limits_table'] = 'limits';
+$config['rest_limits_table'] = 'rest_api_limits';
 /*
 |--------------------------------------------------------------------------
 | REST Ignore HTTP Accept

@@ -21,6 +21,9 @@
 				else :
 					?>
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="<?= site_url( 'home/keys' ); ?>">Keys</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="<?= site_url( 'auth' ); ?>">Account</a>
                     </li>
                     <li class="nav-item">
