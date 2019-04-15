@@ -15,7 +15,7 @@
 				if ( ! $this->ion_auth->logged_in() ) :
 					?>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="<?= site_url( 'auth' ); ?>">Login</a>
+                        <a class="nav-link js-scroll-trigger" href="<?= site_url( 'auth/login' ); ?>">Login</a>
                     </li>
 				<?php
 				else :

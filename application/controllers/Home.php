@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 
 	public function index() {
 		$data = array(
-			'site_title'    => 'Website titel',
+			'site_title'    => 'REST-API Website',
 		);
 
 		$this->load->view('templates/head');

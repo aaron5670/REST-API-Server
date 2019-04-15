@@ -57,7 +57,7 @@ $route['translate_uri_dashes'] = false;
 
 $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
-$route['news']        = 'news';
+$route['Nieuws']      = 'Nieuws';
 
 //$route['api'] = 'xmlrpc_client';
 $route['api']['get'] = 'xmlrpc_client/get';

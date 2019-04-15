@@ -62,6 +62,11 @@ class Auth extends CI_Controller {
 	 * Log the user in
 	 */
 	public function login() {
+		if ( $this->ion_auth->logged_in() ) {
+			// redirect them to the login page
+			redirect( 'auth', 'refresh' );
+			exit();
+		}
 		$this->data['title'] = $this->lang->line( 'login_heading' );
 
 		// validate form input
@@ -111,12 +116,17 @@ class Auth extends CI_Controller {
 			);
 
 			$this->load->view( 'templates/head' );
-			$this->_render_page( 'auth' . DIRECTORY_SEPARATOR . 'login', $this->data );
+			$this->_render_page( 'auth/login', $this->data );
 			$this->load->view( 'templates/footer' );
 		}
 	}
 
 	public function register() {
+		if ( $this->ion_auth->logged_in() ) {
+			// redirect them to the login page
+			redirect( 'auth', 'refresh' );
+			exit();
+		}
 		$this->form_validation->set_rules( 'username', 'Username', 'trim|required|is_unique[users.username]',
 			array( 'is_unique' => 'Username already exits' )
 		);
@@ -126,10 +136,6 @@ class Auth extends CI_Controller {
 		$this->form_validation->set_rules( 'password', 'Password', 'trim|min_length[8]|max_length[20]|required' );
 
 		if ( $this->form_validation->run() === false ) {
-
-//			$data = array(
-//				'site_title'    => 'Website titel',
-//			);
 
 			$this->data['username'] = array(
 				'name'      => 'username',
@@ -260,6 +266,11 @@ class Auth extends CI_Controller {
 	 * Forgot password
 	 */
 	public function forgot_password() {
+		if ( $this->ion_auth->logged_in() ) {
+			// redirect them to the login page
+			redirect( 'auth', 'refresh' );
+			exit();
+		}
 		// setting validation rules by checking whether identity is username or email
 		if ( $this->config->item( 'identity', 'ion_auth' ) != 'email' ) {
 			$this->form_validation->set_rules( 'identity', $this->lang->line( 'forgot_password_identity_label' ), 'required' );

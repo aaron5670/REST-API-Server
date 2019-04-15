@@ -1,4 +1,8 @@
 <?php
+/*
+ * This is login with REST API
+ * DEPRECATED USED FOR REST API EXAMPLES
+ */
 
 class Account extends CI_Controller {
 
