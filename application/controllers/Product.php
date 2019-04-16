@@ -10,7 +10,7 @@ class Product extends CI_Controller {
 		$apiUser = "a.vdberg98@gmail.com";  // user email
 		$apiPass = "A2ronda2n";             // user password
 
-		// Specify the ID of the user
+		// Specify the ID of the product
 		$productID = $id;
 
 		// API URL

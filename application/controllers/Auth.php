@@ -18,11 +18,14 @@ class Auth extends CI_Controller {
 
 		$this->lang->load( 'auth' );
 
+		//Basic site data
 		$data = array(
-			'site_title' => 'Website titel',
+			'site_title' => 'REST-API Website',
 		);
 
-		$this->parser->parse( 'templates/head', $data );
+		//Load <head>
+		$this->load->view( 'templates/head' );
+		//Load <nav>
 		$this->parser->parse( 'templates/navigation', $data );
 	}
 
