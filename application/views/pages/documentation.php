@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <h2>Example #2: CURL post method</h2>
-                <p class="lead">View live example <a href="<?= site_url('/products/post') ?>" target="_blank">here</a>.</p>
+                <p class="lead">View live example <a href="<?= site_url('/product/post') ?>" target="_blank">here</a>.</p>
 	            <?php
 	            $code = file_get_contents( asset_url() . '/text/curl_post.txt' );
 	            highlight_string( $code );
