@@ -11,6 +11,9 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="<?= site_url()?>">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="<?= site_url('docs')?>">Documentation</a>
+                </li>
 				<?php
 				if ( ! $this->ion_auth->logged_in() ) :
 					?>
