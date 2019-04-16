@@ -8,11 +8,11 @@ class Account extends CI_Controller {
 
 	public function register() {
 		// API key
-		$apiKey = 'CODEX@123';
+		$apiKey = '81cdafca86929fb7a0376263d35604e932f5ef40';
 
 		// API auth credentials
-		$apiUser = "admin";
-		$apiPass = "1234";
+		$apiUser = "a.vdberg98@gmail.com";
+		$apiPass = "A2ronda2n";
 
 		// API URL
 		$url = 'http://codeigniter.test/api/authentication/registration/';
@@ -21,7 +21,7 @@ class Account extends CI_Controller {
 		$userData = array(
 			'first_name' => 'John',
 			'last_name'  => 'Doe',
-			'email'      => 'aaron@example.com',
+			'email'      => 'ineenhut@gmail.com',
 			'password'   => 'login_pass',
 			'phone'      => '123-456-7890'
 		);
