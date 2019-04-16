@@ -6,11 +6,18 @@ $apiKey = 'GENERATED_API_KEY';
 $apiUser = "user@email.com";    // user email
 $apiPass = "password";          // user password
 
-// Specify the ID of the product
-$productID = 1;
 
 // API URL
-$url = 'https://website-url.com/api/products/get/' . $productID;
+$url = 'https://website-url.com/api/products/post/';
+
+// User account info
+$userData = array(
+    'title' => 'Wooden table',
+    'desc'  => 'Nice wooden table.',
+    'price' => '250',
+    'tags'  => 'wood, tables',
+    'image' => 'http://pngimg.com/uploads/table/table_PNG6977.png'
+);
 
 // Create a new cURL resource
 $ch = curl_init( $url );
@@ -20,6 +27,8 @@ curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
 curl_setopt( $ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY );
 curl_setopt( $ch, CURLOPT_HTTPHEADER, array( "X-API-KEY: " . $apiKey ) );
 curl_setopt( $ch, CURLOPT_USERPWD, "$apiUser:$apiPass" );
+curl_setopt( $ch, CURLOPT_POST, 1 );
+curl_setopt( $ch, CURLOPT_POSTFIELDS, $userData );
 
 $result = curl_exec( $ch );
 
