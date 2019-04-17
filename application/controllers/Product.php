@@ -14,7 +14,7 @@ class Product extends CI_Controller {
 		$productID = $id;
 
 		// API URL
-		$url = 'http://codeigniter.test/api/products/get/' . $productID;
+		$url = 'http://rest-api.test/api/products/get/' . $productID;
 
 		// Create a new cURL resource
 		$ch = curl_init( $url );
@@ -51,7 +51,7 @@ class Product extends CI_Controller {
 		$apiPass = "A2ronda2n";
 
 		// API URL
-		$url = 'http://codeigniter.test/api/products/post/';
+		$url = 'http://rest-api.test/api/products/post/';
 
 		// User account info
 		$userData = array(

@@ -15,7 +15,7 @@ class Account extends CI_Controller {
 		$apiPass = "1q2w3e4r";
 
 		// API URL
-		$url = 'http://codeigniter.test/api/authentication/registration/';
+		$url = 'http://rest-api.test/api/authentication/registration/';
 
 		// User account info
 		$userData = array(
@@ -61,7 +61,7 @@ class Account extends CI_Controller {
 		$apiPass = "1234";
 
 		// API URL
-		$url = 'http://codeigniter.test/api/authentication/login/';
+		$url = 'http://rest-api.test/api/authentication/login/';
 
 		// User account login info
 		$userData = array(
@@ -125,7 +125,7 @@ class Account extends CI_Controller {
 		$userID = $id;
 
 		// API URL
-		$url = 'http://codeigniter.test/api/authentication/user/' . $userID;
+		$url = 'http://rest-api.test/api/authentication/user/' . $userID;
 
 		// Create a new cURL resource
 		$ch = curl_init( $url );
@@ -165,7 +165,7 @@ class Account extends CI_Controller {
 		$userID = 11;
 
 		// API URL
-		$url = 'http://codeigniter.test/api/authentication/user/';
+		$url = 'http://rest-api.test/api/authentication/user/';
 
 		// User account info
 		$userData = array(
