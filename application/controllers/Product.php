@@ -8,7 +8,7 @@ class Product extends CI_Controller {
 
 		// API auth credentials
 		$apiUser = "a.vdberg98@gmail.com";  // user email
-		$apiPass = "A2ronda2n";             // user password
+		$apiPass = "1q2w3e4r";              // user password
 
 		// Specify the ID of the product
 		$productID = $id;

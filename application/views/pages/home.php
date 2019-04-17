@@ -5,7 +5,7 @@
                 <h2>About this REST API in CodeIgniter</h2>
                 <p class="lead">
                     This REST API server is created in the PHP framework CodeIgniter 3.
-                    It is made for future projects that want to use REST.<br /><br />
+                    It is made for future projects that want to use a REST API.<br /><br />
                     <strong>This REST API server uses the following libraries:</strong>
                 </p>
                 <ul>

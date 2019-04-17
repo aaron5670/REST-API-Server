@@ -12,7 +12,7 @@ class Account extends CI_Controller {
 
 		// API auth credentials
 		$apiUser = "a.vdberg98@gmail.com";
-		$apiPass = "A2ronda2n";
+		$apiPass = "1q2w3e4r";
 
 		// API URL
 		$url = 'http://codeigniter.test/api/authentication/registration/';
