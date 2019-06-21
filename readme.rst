@@ -6,7 +6,7 @@ This REST API server is created in the PHP framework CodeIgniter 3.
 It is made for future projects that want to use a REST API.
 
 *********
-This REST API server uses the following libraries
+This REST API Server uses the following libraries
 *********
 
 -  `Ion Auth <http://github.com/benedmunds/CodeIgniter-Ion-Auth>`_
