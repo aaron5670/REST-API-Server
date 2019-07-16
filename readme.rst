@@ -14,3 +14,15 @@ This REST API Server uses the following libraries
 -   Format class (author: @softwarespot)
 -   API Auth (author: Aaron van den Berg)
 
+
+*********
+Installation
+*********
+
+1. Insert SQL/rest_api_db-structure.sql
+2. Insert SQL/rest_api_db-data.sql
+3. Edit config settings: application/config/config.php
+4. Edit config settings: application/config/database.php
+5. Edit config settings: application/config/email.php (NOT NECESSARY)
+6. Edit config settings: application/config/ion_auth.php
+6. Edit config settings: application/config/rest.php
