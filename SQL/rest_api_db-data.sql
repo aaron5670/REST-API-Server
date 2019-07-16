@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Gegenereerd op: 16 jul 2019 om 20:40
+-- Gegenereerd op: 16 jul 2019 om 21:36
 -- Serverversie: 5.7.19
 -- PHP-versie: 7.2.11
 
@@ -33,15 +33,6 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 (2, 'members', 'General User');
 
 --
--- Gegevens worden geëxporteerd voor tabel `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(30, '127.0.0.1', 'dafsd', 1555611719),
-(31, '127.0.0.1', 'asdf', 1555611746),
-(32, '127.0.0.1', 'sadfasdf', 1555611859);
-
---
 -- Gegevens worden geëxporteerd voor tabel `products`
 --
 
@@ -69,14 +60,14 @@ INSERT INTO `rest_api_keys` (`id`, `user_id`, `key`, `level`, `ignore_limits`, `
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(15, '127.0.0.1', 'ineenhut', '$2y$12$9KP4HT7dwQyRVdZOiNVglOfy3.qCW3/o3jOZqGzea2iUQXvEbA2zG', 'a.vdberg98@gmail.com', NULL, NULL, '127f321438d4226baae8', '$2y$10$M/HZ9uvXYITjrUY/AuKw9OXrtypEPNG731VHaAxvhHKvxnLPcjCv.', 1556035994, NULL, NULL, 1555358672, 1555611876, 1, 'Aaron', 'van den Berg', '', '06 12345678');
+(28, '127.0.0.1', 'admin', '$2y$12$AqE.b5g4eF9ss2F34QCwzeJDwO6QSXkOiW.AxJrXDzsRhktj5P1gq', 'user@email.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1563305018, 1563305745, 1, 'Admin', '-', '', '');
 
 --
 -- Gegevens worden geëxporteerd voor tabel `users_groups`
 --
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
-(21, 15, 1);
+(38, 28, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
