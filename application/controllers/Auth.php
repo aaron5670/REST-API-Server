@@ -176,15 +176,14 @@ class Auth extends CI_Controller {
 			$email    = $this->input->post( 'email' );
 			$password = $this->input->post( 'password' );
 
-			$this->load->library( 'ion_auth' );
 			if ( $this->ion_auth->register( $username, $password, $email ) ) {
-				$_SESSION['auth_message'] = 'The account has been created. You may now login.';
-				$this->session->mark_as_flash( 'auth_message' );
-				redirect( 'auth/login' );
-			} else {
 				$_SESSION['auth_message'] = $this->ion_auth->errors();
 				$this->session->mark_as_flash( 'auth_message' );
 				redirect( 'auth/register' );
+			} else {
+				$_SESSION['auth_message'] = 'The account has been created. You may now login.';
+				$this->session->mark_as_flash( 'auth_message' );
+				redirect( 'auth/login' );
 			}
 		}
 	}
