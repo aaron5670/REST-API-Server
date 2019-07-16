@@ -33,8 +33,9 @@
 
                             <div class="form-group">
                                 <div class="custom-checkbox custom-control">
-	                                <?= form_checkbox( 'remember', '1', false, 'id="remember" class="custom-control-input"' ); ?>
-                                    <label for="remember" class="custom-control-label"><?= lang( 'login_remember_label'); ?></label>
+									<?= form_checkbox( 'remember', '1', false, 'id="remember" class="custom-control-input"' ); ?>
+                                    <label for="remember"
+                                           class="custom-control-label"><?= lang( 'login_remember_label' ); ?></label>
                                 </div>
                             </div>
 
@@ -43,6 +44,10 @@
                             </div>
                             <div class="mt-4 text-center">
                                 Don't have an account? <a href="register">Create One</a>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-link text-center" data-toggle="modal"
+                                        data-target="#loginCredentialsModal">Show admin login credentials
+                                </button>
                             </div>
 							<?= form_close(); ?>
                         </div>
@@ -51,4 +56,28 @@
             </div>
         </div>
     </section>
+</div>
+
+<!-- Login credentials -->
+<div class="modal fade" id="loginCredentialsModal" tabindex="-1" role="dialog"
+     aria-labelledby="loginCredentialsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginCredentialsModalLabel">Login Credentials</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Email:</strong><br/>
+                    user@email.com<br/>
+                    <strong>Password:</strong><br/>
+                    password1</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
