@@ -25,4 +25,4 @@ Installation
 4. Edit config settings: application/config/database.php
 5. Edit config settings: application/config/email.php (NOT NECESSARY)
 6. Edit config settings: application/config/ion_auth.php
-6. Edit config settings: application/config/rest.php
+7. Edit config settings: application/config/rest.php
