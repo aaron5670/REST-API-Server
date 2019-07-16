@@ -2,8 +2,8 @@
 REST API Server
 ###################
 
-This REST API server is created in the PHP framework CodeIgniter 3.
-It is made for future projects that want to use a REST API.
+This REST API server is created with the PHP framework CodeIgniter 3.
+It is made for future projects that want to use a (Plug & play) REST API.
 
 *********
 This REST API Server uses the following libraries
