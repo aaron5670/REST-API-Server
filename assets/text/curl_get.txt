@@ -3,8 +3,8 @@
 $apiKey = 'GENERATED_API_KEY';
 
 // API auth credentials
-$apiUser = "user@email.com";    // user email
-$apiPass = "password";          // user password
+$apiUser = "user@email.com";     // user email
+$apiPass = "password1";          // user password
 
 // Specify the ID of the product
 $productID = 1;
