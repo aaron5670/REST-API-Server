@@ -184,7 +184,7 @@ class Auth extends CI_Controller {
 			} else {
 				$_SESSION['auth_message'] = $this->ion_auth->errors();
 				$this->session->mark_as_flash( 'auth_message' );
-				redirect( 'register' );
+				redirect( 'auth/register' );
 			}
 		}
 	}
