@@ -33,7 +33,7 @@ class Home extends CI_Controller {
 			exit();
 		} else {
 
-			$query = $this->db->query( 'SELECT user_id FROM rest_api_keys' );
+			$query = $this->db->get_where('rest_api_keys', array('user_id' => $_SESSION['user_id']));
 			$row   = $query->row();
 
 			//Load string library
